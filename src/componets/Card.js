@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import cards from '../data/cards';
 import { Link } from 'react-router-dom';
+import './Card.css'; // Import a CSS file to style the cards
 
 const Card = () => {
   const [flippedCardId, setFlippedCardId] = useState(null);
@@ -10,7 +11,7 @@ const Card = () => {
   };
 
   return (
-    <div className="card-container">
+    <div className="card-container mb-5">
       {Object.values(cards).map((card) => (
         <div
           className={`card ${flippedCardId === card.id ? 'flipped' : ''}`}

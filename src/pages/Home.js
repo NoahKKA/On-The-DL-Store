@@ -4,10 +4,11 @@ import Card from "../componets/Card";
 export default function Home(){
     return (
         <div>
-            <Card/>
-            <h1>
-                Home Page
+            <h1 className="text-center">
+                Browse our clothes
             </h1>
+            <Card/>
+            
         </div>
     )
 }

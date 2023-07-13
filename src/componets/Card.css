@@ -1,0 +1,26 @@
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* On mobile, show 2 cards in a row */
+    gap: 20px; /* Add some spacing between the cards */
+    justify-items: center; /* Center the cards horizontally */
+    margin: 0 auto;
+  }
+  
+  @media (min-width: 768px) {
+    /* On desktop (min-width: 768px), show 5 cards in a row */
+    .card-container {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  
+  .card {
+    width: 90%; /* Adjust the width of the cards */
+    max-width: 400px; /* Set a maximum width for the cards */
+  }
+  
+  .card-img-top {
+    width: 100%; /* Ensure the image fills the entire width of the container */
+    height: 300px; /* Set a fixed height for the card images */
+    object-fit: cover;/* Maintain aspect ratio and fill the available space */
+  }
+  
