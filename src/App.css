@@ -5,7 +5,8 @@
 }
 
 #root {
-  background-color: #f4ebbe;
+  background-image: url('/public/background-image.jpg');
+  background-size: cover;
 }
 
 body{
@@ -13,7 +14,7 @@ body{
 }
 
 .custom-navbar {
-  background-color: #dadada;
+  background-color: #5c8774; 
 }
 
 .navbar-logo {

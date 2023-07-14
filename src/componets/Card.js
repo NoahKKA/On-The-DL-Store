@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import cards from '../data/cards';
 import { Link } from 'react-router-dom';
-import './Card.css'; // Import a CSS file to style the cards
+import './Card.css';
 
 const Card = () => {
   const [flippedCardId, setFlippedCardId] = useState(null);

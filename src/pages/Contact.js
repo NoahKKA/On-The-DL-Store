@@ -60,7 +60,6 @@ const ContactPage = () => {
                   onChange={handleNameChange}
                   required
                   style={{
-                    backgroundColor: "#efcea2",
                     border: "2px solid black",
                   }}
                 />
@@ -78,7 +77,6 @@ const ContactPage = () => {
                   pattern="\(\d{3}\)\d{3}-\d{4}"
                   required
                   style={{
-                    backgroundColor: "#efcea2",
                     border: "2px solid black",
                   }}
                 />
@@ -96,7 +94,6 @@ const ContactPage = () => {
                   onChange={handleEmailChange}
                   required
                   style={{
-                    backgroundColor: "#efcea2",
                     border: "2px solid black",
                   }}
                 />
@@ -112,13 +109,12 @@ const ContactPage = () => {
                   value={questions}
                   onChange={handleQuestionsChange}
                   style={{
-                    backgroundColor: "#efcea2",
                     border: "2px solid black",
                   }}
                 />
               </div>
               <div className="text-center">
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className="btn btn-primary mb-5">
                   Submit
                 </button>
               </div>

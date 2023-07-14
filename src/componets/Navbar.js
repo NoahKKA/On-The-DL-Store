@@ -9,7 +9,7 @@ const Navigation = () => {
       expand="lg"
       className="custom-navbar navbar-expand-lg"
     >
-      <Navbar.Brand href="/">
+      <Navbar.Brand href="/picture-web">
         <img
           src={process.env.PUBLIC_URL + "/logo.jpeg"}
           alt="Logo"
@@ -21,7 +21,7 @@ const Navigation = () => {
         <Nav className="ml-auto">
           <Nav.Link
             as={Link}
-            to="/"
+            to="/picture-web"
             className="text-black px-4"
             data-toggle="tooltip"
             data-placement="bottom"
@@ -49,6 +49,7 @@ const Navigation = () => {
           >
              Get In Touch
           </Nav.Link>
+          
         </Nav>
       </Navbar.Collapse>
     </Navbar>
