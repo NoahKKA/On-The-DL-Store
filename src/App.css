@@ -30,3 +30,15 @@ body{
 .about-header2, .about-header {
   font-weight: bold;
 }
+
+.hide-arrows .carousel-control-prev,
+.hide-arrows .carousel-control-next {
+  display: none;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
+}
+
+
