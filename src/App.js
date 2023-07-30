@@ -9,6 +9,7 @@ import Picture from "./pages/Picture";
 import PageTitleUpdater from "./componets/PageTitleUpdater";
 import Loading from "./componets/Loading";
 import ItemForm from "./pages/Test";
+import HomeTest from "./pages/HomeTest";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -33,6 +34,14 @@ function App() {
           element={
             <Layout>
               <Home />
+            </Layout>
+          }
+        />
+        <Route 
+          path='/'
+          element={
+            <Layout>
+              <HomeTest/>
             </Layout>
           }
         />
