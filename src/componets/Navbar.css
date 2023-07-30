@@ -1,0 +1,14 @@
+.custom-navbar {
+    background-color: #5c8774; 
+  }
+  
+  .navbar-logo {
+    max-width: 110px;
+    height: auto; 
+    margin-left: 10px;
+  }
+  
+  .navbar .nav-link::after {
+    display: none;
+  }
+  

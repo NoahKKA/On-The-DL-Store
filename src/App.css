@@ -13,16 +13,6 @@ body{
   margin: 0;
 }
 
-.custom-navbar {
-  background-color: #5c8774; 
-}
-
-.navbar-logo {
-  max-width: 110px; /* Adjust the width as needed */
-  height: auto; /* Maintain the aspect ratio */
-  margin-left: 10px;
-}
-
 .about-header, .about-header2, .about-p {
   font-family: 'Oswald';
 }
@@ -41,4 +31,25 @@ body{
   filter: invert(100%);
 }
 
+.loading-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+}
+
+.loading-container {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007BFF;
+  animation: fadeInOut 2s infinite;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
 

@@ -35,11 +35,18 @@ const cards = {
     id: 4,
     mainPicture: publicDir + "/clothing-items/main4.png",
     otherPicture: [
-      publicDir + "/clothing-items/3-1.jpg",
-      publicDir + "/clothing-items/3-2.jpg",
+      publicDir + "/clothing-items/4-1.png",
+      publicDir + "/clothing-items/4-2.png",
+      publicDir + "/clothing-items/4-3.png"
     ],
-    des: "blah blah blah blah",
+    name:'Flowy Skirt',
+    des: "Green color, with various designs throughout. Light, stretchy material, really soft and comfy. Pre-loved, with no flaws.",
     used: "like-new",
+    price: 5,
+    measurements: {
+      waist: '21',
+      length: '30.5'
+    }
   },
   5: {
     id: 5,
@@ -48,8 +55,16 @@ const cards = {
       publicDir + "/clothing-items/5-1.png",
       publicDir + "/clothing-items/5-2.png",
     ],
-    des: "blah blah blah blah",
+    name: 'PacSun Shorts',
+    des: "Distressed/ dirty denim. 5 pockets. High-rise. Pre-loved but still in great condition.",
     used: "like-new",
+    price: 6,
+    size: '25',
+    measurements: {
+      waist: '25',
+      length: null,
+      inseam: '2'
+    }
   },
   6: {
     id: 6,
@@ -58,8 +73,34 @@ const cards = {
       publicDir + "/clothing-items/6-1.png",
       publicDir + "/clothing-items/6-2.png",
     ],
-    des: "blah blah blah blah",
+    name: 'Nike Leggings',
+    des: "Size small. Heather gray color, soft & stretchy material. Nike Swoosh design on the side of the left calf. Foldable waistband to show \"Just Do It\" print. Pre-loved, just does not fit me like I want anymore.",
     used: "like-new",
+    price: 10,
+    size: 'small',
+    measurements: {
+      waist: '23',
+      inseam: '2',
+      legOpening: '3.75'
+    }
+  },
+  7: {
+    id: 7,
+    mainPicture: publicDir + "/clothing-items/main7.png",
+    otherPicture: [
+      publicDir + "/clothing-items/7-1.png",
+      publicDir + "/clothing-items/7-2.png",
+      publicDir + "/clothing-items/7-3.png",
+      publicDir + "/clothing-items/7-4.png",
+    ],
+    name: 'Chic Shorts',
+    des: "Distressed black shorts. 5 pockets. Size is not shown on the tag, but I am usually a size small in shorts. Pre-loved, just haven't used it in a while. ",
+    used: "like-new",
+    price: 5,
+    measurements: {
+      waist: '24',
+      inseam: '4',
+    }
   },
 };
 
