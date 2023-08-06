@@ -39,7 +39,7 @@ const ContactPage = () => {
         <div className="col-lg-6">
           <h1 className="text-center">Contact</h1>
           <div className="text-center">
-            <FontAwesomeIcon icon={faMapMarkerAlt} className="fa-4x" />
+            <FontAwesomeIcon icon={faMapMarkerAlt} className="fa-2x" />
             <p>Las Vegas, NV</p>
             <h2>Email</h2>
             <p>onthedl667@gmail.com</p>

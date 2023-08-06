@@ -24,8 +24,6 @@
   }
   
   .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5); 
-    color: white;
     height: 100px;
     padding: 0;
     text-align: center;
@@ -42,6 +40,7 @@
     left: 0;
     right: 0;
     margin: 0;
+    color: black;
   }
   
 
@@ -51,6 +50,16 @@
     left: 0;
     right: 0;
     margin: 0;
+    color: black;
+  }
+
+  h2.text-center.header {
+    color:black !important;
+    text-decoration: none;
+  }
+
+  a {
+    text-decoration: none !important;
   }
 
 

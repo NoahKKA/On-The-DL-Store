@@ -12,3 +12,6 @@
     display: none;
   }
   
+  .p.card-text.fw-bold {
+    bottom: 5px;
+  }

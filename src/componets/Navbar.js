@@ -11,7 +11,7 @@ const Navigation = () => {
       expand="lg"
       className="custom-navbar navbar-expand-lg"
     >
-      <Navbar.Brand href="/picture-web">
+      <Navbar.Brand href="/">
         <img
           src={process.env.PUBLIC_URL + "/logo.jpeg"}
           alt="Logo"
@@ -40,10 +40,10 @@ const Navigation = () => {
           >
             <NavDropdown.Item
               as={Link}
-              to="/shop/clothes"
+              to="/the-drip"
               className="text-black"
             >
-              Clothes
+              The Drip
             </NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item
@@ -51,33 +51,33 @@ const Navigation = () => {
               to="/shop/clothes/men"
               className="text-black"
             >
-              Men
+              Women
             </NavDropdown.Item>
             <NavDropdown.Item
               as={Link}
               to="/shop/clothes/women"
               className="text-black"
             >
-              Women
+              Men
             </NavDropdown.Item>
             <NavDropdown.Item
               as={Link}
               to="/shop/clothes/kids"
               className="text-black"
             >
-              Kids
+              Shoes
             </NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item
               as={Link}
-              to="/shop/household"
+              to="/household"
               className="text-black"
             >
               Household
             </NavDropdown.Item>
             <NavDropdown.Item
               as={Link}
-              to="/shop/miscellaneous"
+              to="/miscellaneous"
               className="text-black"
             >
               Miscellaneous

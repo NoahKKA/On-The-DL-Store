@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import AllCards from "./pages/AllCards";
 import Layout from "./componets/Layout";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -9,7 +9,10 @@ import Picture from "./pages/Picture";
 import PageTitleUpdater from "./componets/PageTitleUpdater";
 import Loading from "./componets/Loading";
 import ItemForm from "./pages/Test";
-import HomeTest from "./pages/HomeTest";
+import Home from "./pages/Home";
+import Miscellaneous from "./pages/Misellaneous";
+import Household from "./pages/Household";
+import Clothes from "./pages/Clothes";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -33,15 +36,15 @@ function App() {
           path="/picture-web"
           element={
             <Layout>
-              <Home />
+              <AllCards />
             </Layout>
           }
         />
-        <Route 
-          path='/'
+        <Route
+          path="/"
           element={
             <Layout>
-              <HomeTest/>
+              <Home/>
             </Layout>
           }
         />
@@ -69,11 +72,35 @@ function App() {
             </Layout>
           }
         />
-                <Route
+        <Route
           path="/test"
           element={
             <Layout>
               <ItemForm />
+            </Layout>
+          }
+        />
+        <Route
+          path="/the-drip"
+          element={
+            <Layout>
+              <Clothes />
+            </Layout>
+          }
+        />
+        <Route
+          path="/household"
+          element={
+            <Layout>
+              <Household />
+            </Layout>
+          }
+        />
+        <Route
+          path="/miscellaneous"
+          element={
+            <Layout>
+              <Miscellaneous />
             </Layout>
           }
         />
