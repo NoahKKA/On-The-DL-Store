@@ -31,7 +31,7 @@ const Picture = () => {
     };
     fetchItemById();
   }, [id]);
-  console.log(pictureData.measurements)
+  console.log(pictureData.measurements);
   const handleEnlargeImage = (picture) => {
     setEnlargedPicture(picture);
     setIsEnlarged(true);
@@ -137,9 +137,7 @@ const Picture = () => {
                     <h3>Waist = {pictureData.measurements.waist} in.</h3>
                   )}
                   {pictureData.measurements.width && (
-                    <h3>
-                      Width = {pictureData.measurements.width} in.
-                    </h3>
+                    <h3>Width = {pictureData.measurements.width} in.</h3>
                   )}
                   {pictureData.measurements.length && (
                     <h3>Length = {pictureData.measurements.length} in.</h3>
@@ -148,7 +146,9 @@ const Picture = () => {
                     <h3>Height = {pictureData.measurements.height} in.</h3>
                   )}
                   {pictureData.measurements.base && (
-                    <h3>Base = {pictureData.measurements.base} in.(diameter)</h3>
+                    <h3>
+                      Base = {pictureData.measurements.base} in.(diameter)
+                    </h3>
                   )}
                   {pictureData.measurements.inseam && (
                     <h3>Inseam = {pictureData.measurements.inseam} in.</h3>
@@ -156,6 +156,26 @@ const Picture = () => {
                   {pictureData.measurements.legOpening && (
                     <h3>
                       Leg Opening = {pictureData.measurements.legOpening} in.
+                    </h3>
+                  )}
+                  {pictureData.measurements.bust && (
+                    <h3>
+                      Bust = {pictureData.measurements.bust} in.
+                    </h3>
+                  )}
+                  {pictureData.measurements.hem && (
+                    <h3>
+                      Hem = {pictureData.measurements.hem} in.
+                    </h3>
+                  )}
+                  {pictureData.measurements.shoulderToHem && (
+                    <h3>
+                      Shoulder to Hem = {pictureData.measurements.shoulderToHem} in.
+                    </h3>
+                  )}
+                  {pictureData.measurements.sleeveLength && (
+                    <h3>
+                      Sleeve Length = {pictureData.measurements.sleeveLength} in.
                     </h3>
                   )}
                 </div>

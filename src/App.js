@@ -13,6 +13,9 @@ import Home from "./pages/Home";
 import Miscellaneous from "./pages/Misellaneous";
 import Household from "./pages/Household";
 import Clothes from "./pages/Clothes";
+import WomenClothes from "./pages/Women";
+import Shoes from "./pages/Shoes";
+import MenClothes from "./pages/Men.js";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -85,6 +88,30 @@ function App() {
           element={
             <Layout>
               <Clothes />
+            </Layout>
+          }
+        />
+        <Route
+          path="/the-drip/women"
+          element={
+            <Layout>
+              <WomenClothes/>
+            </Layout>
+          }
+        />
+        <Route
+          path="/the-drip/men"
+          element={
+            <Layout>
+              <MenClothes/>
+            </Layout>
+          }
+        />
+          <Route
+          path="/the-drip/kicks"
+          element={
+            <Layout>
+              <Shoes/>
             </Layout>
           }
         />

@@ -15,3 +15,13 @@
   .p.card-text.fw-bold {
     bottom: 5px;
   }
+
+  .custom-dropdown-mobile{
+    text-align: right;
+  }
+
+  @media (max-width: 768px) {
+    div.dropdown-menu.show {
+      text-align: right;
+    }
+  }

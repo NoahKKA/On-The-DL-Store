@@ -74,7 +74,7 @@ const ItemForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style={{margin:"3rem"}}>
       <div>
         <label>Name:</label>
         <input
@@ -100,15 +100,17 @@ const ItemForm = () => {
           value={des}
           onChange={(e) => setDes(e.target.value)}
           required
+          style={{width:"80%"}}
         />
       </div>
       <div>
         <label>Measurements:</label>
         <textarea
           rows="3"
-          value={measurementsInput} // Use the raw input value here
+          value={measurementsInput} 
           onChange={handleChangeMeasurements}
           placeholder={`Example format:\nwaist: 15in, length: 12in`}
+          style={{width:"80%"}}
         />
       </div>
       <div>
@@ -134,6 +136,7 @@ const ItemForm = () => {
           type="text"
           value={otherPictures}
           onChange={(e) => setOtherPictures(e.target.value)}
+          style={{width: "100%", height:"3rem", fontSize: ".7rem"}}
           required
         />
       </div>
@@ -143,16 +146,16 @@ const ItemForm = () => {
           <option value="clothes">Clothes</option>
           <option value="miscellaneous">Miscellaneous</option>
           <option value="household">Household</option>
-          <option value="footwear">Footwear</option> {/* Added "footwear" option */}
+          <option value="footwear">Footwear</option> 
         </select>
       </div>
       <div>
         <label>Subcategory:</label>
         <select
-          value={subCategory === null ? "null" : subCategory} // Display "null" option if subCategory is null
+          value={subCategory === null ? "null" : subCategory} 
           onChange={(e) => setSubCategory(e.target.value === "null" ? null : e.target.value)}
         >
-          <option value="null">None</option> {/* Added "None" option for null subCategory */}
+          <option value="null">None</option>
           <option value="women">Women</option>
           <option value="men">Men</option>
           <option value="kids">Kids</option>

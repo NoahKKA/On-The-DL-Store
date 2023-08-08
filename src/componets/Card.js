@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import WebFont from "webfontloader";
 import "./Card.css";
 
-const Card = ({ category }) => {
+const Card = ({ category, subCategory }) => {
   const [flippedCardId, setFlippedCardId] = useState(null);
   const [items, setItems] = useState([]);
   const isMobileDevice = window.innerWidth < 768;
@@ -19,14 +19,18 @@ const Card = ({ category }) => {
     });
     const fetchItems = async () => {
       try {
-        let query = supabase.from("Items").select("*").limit(20);
-
+        let query = supabase.from("Items").select("*");
+  
         if (category && category !== "*") {
           query = query.eq("category", category);
         }
-
+  
+        if (subCategory && subCategory !== "*") {
+          query = query.eq("subCategory", subCategory);
+        }
+  
         const { data, error } = await query;
-
+  
         if (error) {
           throw new Error(error.message);
         }
@@ -35,11 +39,11 @@ const Card = ({ category }) => {
         console.log("Error Fetching Items: ", error);
       }
     };
+  
     fetchItems();
-  }, [category]);
+  }, [category, subCategory]);
 
-
-  console.log(items)
+  console.log(items);
   const handleCardClick = (cardId) => {
     if (!isMobileDevice) {
       setFlippedCardId((prevCardId) => (prevCardId === cardId ? null : cardId));
@@ -110,8 +114,11 @@ const Card = ({ category }) => {
               <button onClick={(e) => handleButtonClick(e, card.item_id)}>
                 Close
               </button>
-              <Link to={`/picture/${card.item_id}`} className="btn btn-primary custome-btn">
-                  Learn More
+              <Link
+                to={`/picture/${card.item_id}`}
+                className="btn btn-primary custome-btn"
+              >
+                Learn More
               </Link>
             </div>
           </div>
