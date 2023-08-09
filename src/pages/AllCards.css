@@ -1,0 +1,11 @@
+.container{
+    margin-left:10px !important;
+    max-width: 95% !important;
+}
+
+
+@media (min-width: 768px) {
+    .custom-allcards {
+      margin-left: auto;
+    }
+  }

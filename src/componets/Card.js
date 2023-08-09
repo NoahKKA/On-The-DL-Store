@@ -4,10 +4,21 @@ import { Link } from "react-router-dom";
 import WebFont from "webfontloader";
 import "./Card.css";
 
-const Card = ({ category, subCategory }) => {
+const Card = ({ category, subCategory, searchInput, priceFilter }) => {
   const [flippedCardId, setFlippedCardId] = useState(null);
   const [items, setItems] = useState([]);
-  const isMobileDevice = window.innerWidth < 768;
+  const [isMobileDevice, setIsMobileDevice] = useState(false);
+
+  useEffect(() => {
+    setIsMobileDevice(window.innerWidth < 768);
+    const handleResize = () => {
+      setIsMobileDevice(window.innerWidth < 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     WebFont.load({
@@ -28,6 +39,20 @@ const Card = ({ category, subCategory }) => {
         if (subCategory && subCategory !== "*") {
           query = query.eq("subCategory", subCategory);
         }
+
+        if (searchInput) {
+          query = query.ilike("name", `%${searchInput}%`);
+        }
+    
+        if (priceFilter === "lowest") {
+          query = query.order("price");
+        } else if (priceFilter === "highest") {
+          query = query.order("price", { ascending: false });
+        } else if (priceFilter === "under10") {
+          query = query.lt("price", 10);
+        } else if (priceFilter === "under5") {
+          query = query.lt("price", 5);
+        }
   
         const { data, error } = await query;
   
@@ -41,7 +66,7 @@ const Card = ({ category, subCategory }) => {
     };
   
     fetchItems();
-  }, [category, subCategory]);
+  }, [category, subCategory, priceFilter, searchInput]);
 
   console.log(items);
   const handleCardClick = (cardId) => {

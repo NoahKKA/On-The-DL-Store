@@ -2,6 +2,8 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { supabase } from "../SupaBaseClient";
+
 
 const ContactPage = () => {
   const [name, setName] = useState("");
@@ -9,10 +11,23 @@ const ContactPage = () => {
   const [email, setEmail] = useState("");
   const [questions, setQuestions] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Perform form submission logic here
-    console.log("Form submitted");
+  
+    try {
+      const { data, error } = await supabase.from("QuestionsnConcerns").insert([
+        { name, phone, email, input: questions },
+      ]);
+  
+      if (error) {
+        console.error("Error inserting data:", error);
+      } else {
+        console.log("Data inserted successfully:", data);
+        window.location.href = "/";
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
   };
 
   const handleNameChange = (e) => {
@@ -80,7 +95,6 @@ const ContactPage = () => {
                     border: "2px solid black",
                   }}
                 />
-                <small>Format: (xxx)xxx-xxxx</small>
               </div>
               <div className="mb-3">
                 <label htmlFor="email" className="form-label">

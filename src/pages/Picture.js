@@ -159,23 +159,21 @@ const Picture = () => {
                     </h3>
                   )}
                   {pictureData.measurements.bust && (
-                    <h3>
-                      Bust = {pictureData.measurements.bust} in.
-                    </h3>
+                    <h3>Bust = {pictureData.measurements.bust} in.</h3>
                   )}
                   {pictureData.measurements.hem && (
-                    <h3>
-                      Hem = {pictureData.measurements.hem} in.
-                    </h3>
+                    <h3>Hem = {pictureData.measurements.hem} in.</h3>
                   )}
                   {pictureData.measurements.shoulderToHem && (
                     <h3>
-                      Shoulder to Hem = {pictureData.measurements.shoulderToHem} in.
+                      Shoulder to Hem = {pictureData.measurements.shoulderToHem}{" "}
+                      in.
                     </h3>
                   )}
                   {pictureData.measurements.sleeveLength && (
                     <h3>
-                      Sleeve Length = {pictureData.measurements.sleeveLength} in.
+                      Sleeve Length = {pictureData.measurements.sleeveLength}{" "}
+                      in.
                     </h3>
                   )}
                 </div>
