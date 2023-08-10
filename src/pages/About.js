@@ -39,6 +39,7 @@ export default function About() {
           <br />
           <p className="about-p">Thanks again for showing up on the DL &lt;3</p>
           <p className="about-p">With Love,</p>
+          <img src="/signature.png" alt="DL signature" style={{width: '175px'}}/>
         </div>
       </div>
     </div>

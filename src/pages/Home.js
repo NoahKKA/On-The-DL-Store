@@ -4,7 +4,6 @@ import { Carousel } from "react-bootstrap";
 import { supabase } from "../SupaBaseClient";
 import { Link } from "react-router-dom";
 
-
 export default function Home() {
   const [categoryData, setCategoryData] = useState([]);
 
@@ -48,10 +47,20 @@ export default function Home() {
           />
         </div>
       </div>
-
+      <div style={{width: '75%', backgroundColor:'#fff'}} className="m-auto p-3 mt-4 rounded ">
+        <h2 className="mt-4 text-center" style={{color:"grey"}}>
+          Welcome! Discover a treasure trove of pre-loved items waiting to find
+          a new home. Embrace sustainability while shopping for unique pieces
+          that come with a rich history. Join us in our mission to reduce waste
+          and make a positive impact on the environment, one purchase at a time.
+          Happy thrifting!
+        </h2>
+      </div>
       {categoryData.length > 0 && categoryData[0].length > 0 && (
         <div className="row mt-4">
-          <Link to='/the-drip'><h2 className="text-center header">The Drip</h2></Link>
+          <Link to="/the-drip">
+            <h2 className="text-center header">The Drip</h2>
+          </Link>
           <div className="col">
             <Carousel
               id="carousel"
@@ -80,7 +89,9 @@ export default function Home() {
 
       {categoryData.length > 0 && categoryData[0].length > 0 && (
         <div className="row mt-4">
-          <Link to='/household'><h2 className="text-center header">Household</h2></Link>
+          <Link to="/household">
+            <h2 className="text-center header">Household</h2>
+          </Link>
           <div className="col">
             <Carousel
               id="carousel"
@@ -109,7 +120,9 @@ export default function Home() {
 
       {categoryData.length > 0 && categoryData[0].length > 0 && (
         <div className="row mt-4 mb-4">
-          <Link to='/miscellaneous'><h2 className="text-center header">Miscellaneous</h2></Link>
+          <Link to="/miscellaneous">
+            <h2 className="text-center header">Miscellaneous</h2>
+          </Link>
           <div className="col">
             <Carousel
               id="carousel"

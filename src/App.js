@@ -36,7 +36,7 @@ function App() {
       <Routes>
         <Route
           exact
-          path="/picture-web"
+          path="/all-items"
           element={
             <Layout>
               <AllCards />

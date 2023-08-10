@@ -33,7 +33,7 @@ const Navigation = () => {
         <Nav className="ml-auto">
           <Nav.Link
             as={Link}
-            to="/picture-web"
+            to="/"
             className="text-black"
             style={{ marginLeft: "auto", marginRight: "10px" }}
           >
@@ -55,7 +55,7 @@ const Navigation = () => {
           >
             <NavDropdown.Item
               as={Link}
-              to="/picture-web"
+              to="/all-items"
               className="text-black"
             >
               All Items
