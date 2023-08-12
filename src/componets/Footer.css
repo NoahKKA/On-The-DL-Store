@@ -1,0 +1,17 @@
+.custom-a-link:hover {
+    color: blue !important;
+}
+
+.custom-padding{
+    padding-top: 1.5rem;
+}
+
+
+@media (max-width: 768px) {
+    h5{
+        margin-top: 15px !important;
+    }
+    .custom-padding {
+        padding-top: .5rem;
+    }
+  }

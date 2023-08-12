@@ -7,18 +7,7 @@ import "./Card.css";
 const Card = ({ category, subCategory, searchInput, priceFilter }) => {
   const [flippedCardId, setFlippedCardId] = useState(null);
   const [items, setItems] = useState([]);
-  const [isMobileDevice, setIsMobileDevice] = useState(false);
 
-  useEffect(() => {
-    setIsMobileDevice(window.innerWidth < 768);
-    const handleResize = () => {
-      setIsMobileDevice(window.innerWidth < 768);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
   useEffect(() => {
     WebFont.load({
@@ -70,22 +59,9 @@ const Card = ({ category, subCategory, searchInput, priceFilter }) => {
 
   console.log(items);
   const handleCardClick = (cardId) => {
-    if (!isMobileDevice) {
       setFlippedCardId((prevCardId) => (prevCardId === cardId ? null : cardId));
-    }
   };
 
-  const handleCardTouchStart = () => {
-    if (isMobileDevice) {
-      setFlippedCardId(null);
-    }
-  };
-
-  const handleCardTouchEnd = (cardId) => {
-    if (isMobileDevice) {
-      setFlippedCardId(cardId);
-    }
-  };
 
   const handleButtonClick = (e, cardId) => {
     e.stopPropagation();
@@ -99,8 +75,6 @@ const Card = ({ category, subCategory, searchInput, priceFilter }) => {
           className={`card ${flippedCardId === card.item_id ? "flipped" : ""}`}
           key={card.item_id}
           onClick={() => handleCardClick(card.item_id)}
-          onTouchStart={handleCardTouchStart}
-          onTouchEnd={() => handleCardTouchEnd(card.item_id)}
           style={{ borderRadius: "15px" }}
         >
           <div
@@ -127,7 +101,8 @@ const Card = ({ category, subCategory, searchInput, priceFilter }) => {
                 <h5 className="card-title">{card.name}</h5>
                 <p
                   className="card-text fw-bold"
-                  style={{ fontFamily: "Victor Mono" }}
+                  style={{ fontFamily: "Victor Mono"}}
+                  
                 >
                   ${card.price}
                 </p>

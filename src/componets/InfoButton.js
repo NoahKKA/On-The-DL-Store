@@ -40,7 +40,7 @@ const InfoButtonWithPopup = () => {
                 </li>
                 <li>Meetups and pickups only. Shipping is not available.</li>
                 <li>
-                  When a sale is made, freebies are available. Customers will be
+                  When a sale is made, freebies are available for order $10+. Customers will be
                   provided a list and are able to choose an item they want.
                 </li>
                 <li>ALL SALES FINAL; no returns and/or exchanges.</li>

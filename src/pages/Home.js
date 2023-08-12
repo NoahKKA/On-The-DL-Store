@@ -48,13 +48,11 @@ export default function Home() {
         </div>
       </div>
       <div style={{width: '75%', backgroundColor:'#fff'}} className="m-auto p-3 mt-4 rounded ">
-        <h2 className="mt-4 text-center" style={{color:"grey"}}>
-          Welcome! Discover a treasure trove of pre-loved items waiting to find
+      <img src={process.env.PUBLIC_URL + '/homepageMessage1.png'} alt="Welcome! Discover a treasure trove of pre-loved items waiting to find
           a new home. Embrace sustainability while shopping for unique pieces
           that come with a rich history. Join us in our mission to reduce waste
           and make a positive impact on the environment, one purchase at a time.
-          Happy thrifting!
-        </h2>
+          Happy thrifting!" className="" style={{height:'auto', width: '100%'}}></img>
       </div>
       {categoryData.length > 0 && categoryData[0].length > 0 && (
         <div className="row mt-4">
