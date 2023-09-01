@@ -28,7 +28,7 @@ Product Details Page: Design a product details page to display comprehensive inf
 
 ## Demo
 
-WIP
+https://on-the-dl-store.onrender.com
 
 ## Usage
 
